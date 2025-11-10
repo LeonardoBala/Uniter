@@ -1,8 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@tailwind utilities;
-
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -126,6 +123,16 @@
   }
 }
 
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
+
 @layer components {
   .uniter-title {
     font-size: 26px;
@@ -138,5 +145,9 @@
     .uniter-title {
       display: none;
     }
+  }
+
+  .h-screen-minus-72 {
+    height: calc(100vh - 72px);
   }
 }
