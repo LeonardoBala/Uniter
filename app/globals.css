@@ -2,7 +2,15 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
+.cl-providerIcon__github {
+  filter: invert(1);
+}
+
+
 @theme inline {
+  --color-orange-1: #FF742E;
+  --color-purple-1: #830EF9;
+  --color-yellow-1: #F9A90E;
   --color-dark-1: #1C1F2E;
   --color-dark-2: #161925;
   --color-blue-1: #0E78f9;
@@ -131,6 +139,10 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+
+  .bg-hero {
+    background-image: url('/images/hero-background.png');
+  }
 }
 
 @layer components {
@@ -147,7 +159,14 @@
     }
   }
 
+  .glassmorphism {
+    background: rgba(225, 225, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
   .h-screen-minus-72 {
     height: calc(100vh - 72px);
   }
+
 }
